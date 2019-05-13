@@ -28,7 +28,13 @@ with open('notes/raisin_team.csv') as f:
 # Lesson 3.1
 f = open('notes/raisin_team.csv')
   line = next(f)
-
+f.close()
 
 # Lesson 4
 # Convert the contents of the file into a list line by line. 
+
+f = open('notes/raisin_team.csv')
+file_elements = list(f)
+print(file_elements)
+# line = next(f)
+f.close()
