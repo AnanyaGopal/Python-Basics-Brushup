@@ -58,3 +58,10 @@ Ilin = Sindhu
 # And, Person('Ilin') has 0 reference counters.
 
 # Person('Ilin') is eligible for garbarge collection.
+
+# None is a singleton object.
+# At any point there will only be one object in memory. 
+None
+id(None)
+hex(id(None))
+
