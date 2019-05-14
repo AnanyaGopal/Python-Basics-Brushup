@@ -9,7 +9,11 @@ l.append(NameError)
 
 # Getting the element of the lists.
 # l[0], l[1]
-
+# Gets you the last element.
+l[len[l] - 1] 
+# You call l twice in the statement. Python understands that the -1 is taken out from the length 
+# of the object, that the indexing is done at. so, l[-1] will give you the last element as well.
+l[-1] 
 
 # Slicing
 # Below statement will give you 5 elements - 0th to the 4th.
