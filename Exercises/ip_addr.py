@@ -22,7 +22,8 @@ TenGigE0/2/0/1                 unassigned      Down                  Down
     # Read one entry
     # Looks like this: GigabitEthernet0/7/0/3 unassigned Down Down
     # Split this entry into a field.
-    
+
+processed_file = open('ipaddr_out.txt', 'w')
 f = open('notes/ipv4_int_bri.txt')
 header = next(f)
 #print(header)
@@ -32,6 +33,8 @@ for line in f:
     interface, ip_address, status, protocol = entry
     # print('%-15s %s') % (ipaddr, interface))
     if status.lower() == 'up':
-        print("%s %s %s" % (ip_address, ' '*(15-len(ip_address)), interface))
+        #print("%s %s %s" % (ip_address, ' '*(15-len(ip_address)), interface))
+        processed_file.write("%s %s %s" % (ip_address, ' '*(15-len(ip_address)), interface))
     
 f.close()
+processed_file.close()
