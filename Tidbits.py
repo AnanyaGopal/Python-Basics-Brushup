@@ -65,3 +65,34 @@ None
 id(None)
 hex(id(None))
 
+
+# Code snippet 1 A
+line = next(file_object)
+line = line.rstrip()  
+headline = line.split()
+print(line)
+
+# Code snippet 1 B
+line = next(file_object)
+# You don't need rstrip because if you use split,
+# without a delimiter it removes any whitespace. and '\n' is a kind of whitespace.
+headline = line.split()
+
+
+# Assigning variable's data values from line.split() [Essentially UNPACKING]
+# Code snippet 2 A
+line = next(file_object)
+fields = line.split()
+interface =  fields[0]
+ip_address = fields[1]
+status =     fields[2]
+protocol =   fields[3]
+
+# Code snippet 2 B
+line = next(file_object)
+fields = line.split()
+interface, ip_address, status, protocol = fields
+
+
+
+
