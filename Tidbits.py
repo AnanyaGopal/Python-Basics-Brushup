@@ -66,6 +66,16 @@ id(None)
 hex(id(None))
 
 
+
+# concept of dunder (Double underscore.)
+
+>>> (1).__add__(2)
+3
+>>> 1 + 2
+3
+>>> 
+
+
 # Code snippet 1 A
 line = next(file_object)
 line = line.rstrip()  
